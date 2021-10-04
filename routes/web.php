@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DataSiswaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,7 +28,7 @@ Route::get('/nama-saya-adalah/{nama?}', function ($nama = 'User tidak mengisi'){
 //    return 'Hasil Luas Segitia adalah: ' . $hasil;
 //});
 
-Route::get('/hitung-luas-segitiga/{alas}/{tinggi}', function ($alas = 1, $tinggi = 1){
+Route::get('/hitung-luas-segitiga/{alas?}/{tinggi?}', function ($alas = 1, $tinggi = 1){
     $hasil = $alas * $tinggi;
     return 'Hasil Luas Segitia adalah: ' . $hasil;
 });
@@ -42,3 +44,8 @@ Route::group(['prefix' => 'jurusan'], function (){
         return $nama;
     });
 });
+
+Route::get('data-siswa', [DataSiswaController::class, 'datasiswa']);
+Route::get('nama/{nama}', [DataSiswaController::class, 'nama']);
+
+Route::resource('user', UserController::class);
