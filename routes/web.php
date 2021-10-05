@@ -14,7 +14,7 @@ Route::get('laravel', function () {
 
 //parameter wajib
 Route::get('/nama-framework/{nama}/umur-saya/{umur}', function ($nama,$umur) {
-    return 'Nama saya adalah : ' . $nama . 
+    return 'Nama saya adalah : ' . $nama .
     '<br> Umur saya : '. $umur;
 });
 
@@ -52,4 +52,8 @@ Route::resource('user', UserController::class);
 
 Route::get('index', function(){
     return view('index');
+});
+
+Route::get('album', function(){
+    return view('album');
 });
