@@ -49,3 +49,7 @@ Route::get('data-siswa', [DataSiswaController::class, 'datasiswa']);
 Route::get('nama/{nama}', [DataSiswaController::class, 'nama']);
 
 Route::resource('user', UserController::class);
+
+Route::get('index', function(){
+    return view('index');
+});
