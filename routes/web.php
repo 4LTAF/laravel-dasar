@@ -5,7 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Assalamualaikum';
+    return view('index');
 });
 
 Route::get('laravel', function () {
@@ -54,6 +54,6 @@ Route::get('index', function(){
     return view('index');
 });
 
-Route::get('album', function(){
+Route::get('sadjiasiojioadsjiasdiojas', function(){
     return view('album');
-});
+})->name('album');
