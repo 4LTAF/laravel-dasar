@@ -5,7 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('beranda');
 });
 
 Route::get('laravel', function () {
@@ -50,10 +50,27 @@ Route::get('nama/{nama}', [DataSiswaController::class, 'nama']);
 
 Route::resource('user', UserController::class);
 
-Route::get('index', function(){
-    return view('index');
+Route::get('indexcontoh', function(){
+    return view('indexcontoh');
 });
 
 Route::get('sadjiasiojioadsjiasdiojas', function(){
     return view('album');
 })->name('album');
+
+//project
+Route::get('beranda', function(){
+    return view('beranda');
+})->name('beranda');
+
+Route::get('about', function(){
+    return view('about');
+})->name('about');
+
+Route::get('post', function(){
+    return view('post');
+})->name('post');
+
+Route::get('contact', function(){
+    return view('contact');
+})->name('contact');
