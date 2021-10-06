@@ -16,6 +16,10 @@
 </head>
 
 <body>
+
+    <!-- Responsive navbar-->
+    @include('include.nav')
+    <!-- Header-->
     <header class="py-5">
         <div class="container px-lg-5">
             <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
@@ -29,11 +33,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Responsive navbar-->
-    @include('include.nav')
-    <!-- Header-->
-    @include('include.header')
     <!-- Page Content-->
     <section class="pt-4">
         <div class="container px-lg-5">
