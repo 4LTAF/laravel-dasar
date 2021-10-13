@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //halaman utama
-        $nama = 'Altaf';
-        $namaBelakang = 'Faadhil';
-        return view('user.index', compact('nama', 'namaBelakang'));
+        //
     }
 
     /**
@@ -26,10 +23,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //halaman menambah data
-        $nama = 'Altaf';
-        $namaBelakang = 'Faadhil';
-        return view('user.create', compact('nama', 'namaBelakang'));
+        //
     }
 
     /**
@@ -40,7 +34,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //proses menambahkan data
+        //
     }
 
     /**
@@ -51,9 +45,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //halaman menampilkan data by id
-        $nama = 'Altaf';
-        return view('user.show', compact('id', 'nama'));
+        //
     }
 
     /**
@@ -64,9 +56,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //halaman edit data by id
-        $namaBelakang = 'Faadhil';
-        return view('user.edit', compact('namaBelakang'));
+        //
     }
 
     /**
@@ -78,8 +68,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //proses edit data by id
-        return 'proses edit data : ' . $id;
+        //
     }
 
     /**
@@ -90,7 +79,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //proses hapus data by id
-        return 'proses hapus data';
+        //
     }
 }
